@@ -45,4 +45,9 @@
   .button:focus {
     opacity: 0.8;
   }
+
+  .content {
+    margin-top: 0px; /* Adjust this value to set the distance between the navbar and content */
+    padding: 20px;
+  }
   
