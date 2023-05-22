@@ -1,12 +1,11 @@
 import './App.css';
 import NavigationMenu from './navigation_menu';
-import WaveBackground from './WaveBackground';
+import './waveBackground.css'
 
 function App() {
   return (
-    <div>
+    <div className='gradient'>
       <NavigationMenu />
-      <WaveBackground />
     </div>
   );
 }

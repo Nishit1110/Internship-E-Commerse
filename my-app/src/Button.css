@@ -6,7 +6,7 @@
 
 .button {
     flex: 1;
-    margin: 0 25px;
+    margin: 0 10px;
     display: inline-block;
     align-items: center;
     padding: 10px 20px;
@@ -17,28 +17,10 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  /* Button color variations */
-  .button-primary {
     background-color: #007bff;
     color: #fff;
   }
   
-  .button-secondary {
-    background-color: #6c757d;
-    color: #fff;
-  }
-  
-  .button-success {
-    background-color: #28a745;
-    color: #fff;
-  }
-  
-  .button-danger {
-    background-color: #dc3545;
-    color: #fff;
-  }
   
   /* Button hover and focus states */
   .button:hover,
@@ -47,7 +29,7 @@
   }
 
   .content {
-    margin-top: 0px; /* Adjust this value to set the distance between the navbar and content */
+    margin-top: 5%; /* Adjust this value to set the distance between the navbar and content */
     padding: 20px;
   }
   

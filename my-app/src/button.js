@@ -1,22 +1,17 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+import { Routes, Route, BrowserRouter} from 'react-router-dom';
 import './Button.css';
 import Home from './Home';
 import About from './About';
 import Info from './Info';
-
 import './NavigationMenu.css';
 import LoginPage from './Login';
+import Header from './Header';
 
 const Button = () => {
   return (
     <BrowserRouter>
-      <div className='navigation-menu'>
-        <Link to="/" className="button button-primary">Home</Link>
-        <Link to="/About" className="button button-secondary">About</Link>
-        <Link to="/Info" className="button button-success">Info</Link>
-        <Link to="/Login" className="button button-danger">Login</Link>
-      </div>
+    <Header />
       <div className="content">
         <Routes>
           <Route path='/' element={<  Home />}></Route>

@@ -1,9 +1,19 @@
-.navigation-menu {
-    background-color: #000000;
-    padding: 10px;
-    height: 100%;
-    margin-top: 2.5%;
+.Header {
+  position: fixed;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    justify-Content: center;
+    align-Items: center;
+    height: 60px;
+    padding: 15px;
+    width: 50%;
+    margin-top: 0;
     border-radius: 4px;
     margin-bottom: 20px;
+    display: inline-flex;
+    flex-direction: row;
+    background: inherit;
+    background-color: transparent;
   }
   

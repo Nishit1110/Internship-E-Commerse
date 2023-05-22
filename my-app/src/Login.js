@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { useSpring, animated } from "react-spring";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [registrationFormStatus, setRegistartionFormStatus] = useState(false);
@@ -69,7 +70,7 @@ function LoginForm() {
       <input type="text" id="username" />
       <label for="password">PASSWORD</label>
       <input type="text" id="password" />
-      <input type="submit" value="submit" className="submit" />
+      <Link to="/"><input type="submit" value="submit" className="submit" /></Link>
     </React.Fragment>
   );
 }
