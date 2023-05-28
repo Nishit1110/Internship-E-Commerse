@@ -6,6 +6,7 @@ import './App.css'
 import { Login, Register, PageNotFound, Product, Edit } from "./pages";
 import { Footer, Header, Searchbar } from "./components";
 import { LoginContext } from "./contexts";
+import Cart from "./pages/cart";
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
             <Routes>
               <Route path="/product" element={<Product />} />
               <Route path="/edit" element={<Edit />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path='*' element={<PageNotFound />} />
             </Routes>
           )}

@@ -5,55 +5,72 @@ import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../contexts";
 
 export default function Header() {
-    const { isLogin, setIslogin } = useContext(LoginContext);
-    const navigate = useNavigate();
+  const { isLogin, setIslogin } = useContext(LoginContext);
+  const navigate = useNavigate();
 
-    const handleLogin = () => {
-        navigate("/login");
-    }
+  const handleLogin = () => {
+    navigate("/login");
+  };
 
-    const handleRegister = () => {
-        navigate("/register");
-    }
+  const handleRegister = () => {
+    navigate("/register");
+  };
 
-    const handleCart = () => {
-        navigate("/cart");
-    };
+  const handleCart = () => {
+    navigate("/cart");
+  };
 
-    const handleLogout = () => {
-        setIslogin(false);
-        navigate("/login");
-    };
+  const handleLogout = () => {
+    setIslogin(false);
+    navigate("/login");
+  };
 
+  return (
+    <div className="overflow-hidden z-10 w-full flex h-14 justify-between items-center bg-red-400 text-white mx-auto px-24">
+      <div className="">Logo</div>
+      {!isLogin ? (
+        <div className="flex gap-4">
+          <button
+            className="btn bg-blue-600 px-2 py-1 rounded-md hover:bg-blue-700"
+            onClick={handleLogin}
+          >
+            Login
+          </button>
 
-    return (
-        <div className="overflow-hidden z-10 w-full flex h-14 justify-between items-center bg-red-400 text-white mx-auto px-24">
-            <div className="">Logo</div>
-            {!isLogin ?
-                (<div className="flex gap-4">
-                    <button className="btn bg-blue-600 px-2 py-1 rounded-md hover:bg-blue-700"
-                        onClick={handleLogin}
-                    >Login</button>
+          <button
+            className="btn bg-blue-600 px-2 py-1 rounded-md hover:bg-blue-700"
+            onClick={handleRegister}
+          >
+            Register
+          </button>
 
-                    <button className="btn bg-blue-600 px-2 py-1 rounded-md hover:bg-blue-700"
-                        onClick={handleRegister}
-                    >Register</button>
-
-                    <div className="bg-white border-blue-600 text-red-500 px-2 py-1 rounded-lg flex items-center gap-1 cursor-pointer"
-                        onClick={handleCart}
-                    >
-                        <BsFillCartFill />
-                        <p className="text-600">Cart</p>
-                    </div>
-                </div>)
-                : (
-                    <div className="flex gap-4">
-                        <button className="btn bg-blue-600 px-2 py-1 rounded-md hover:bg-blue-700"
-                            onClick={handleLogout}
-                        >Logout</button>
-                    </div>
-                )
-            }
+          <div
+            className="bg-white border-blue-600 text-red-500 px-2 py-1 rounded-lg flex items-center gap-1 cursor-pointer"
+            onClick={handleCart}
+          >
+            <BsFillCartFill />
+            <p className="text-600">Cart</p>
+          </div>
         </div>
-    );
+      ) : (
+        <div className="flex gap-4">
+          <div className="flex gap-4">
+            <button
+              className="btn bg-blue-600 px-2 py-1 rounded-md hover:bg-blue-700"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          </div>
+          <div
+            className="bg-white border-blue-600 text-red-500 px-2 py-1 rounded-lg flex items-center gap-1 cursor-pointer"
+            onClick={handleCart}
+          >
+            <BsFillCartFill />
+            <p className="text-600">Cart</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
